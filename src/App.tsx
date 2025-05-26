@@ -1,9 +1,35 @@
+//The main place where we add all of the components together
+
+import Header from "./components/header";
+import Hero from "./components/hero";
+import Features from "./components/features";
+import Overview from "./components/overview";
+import Pricing from "./components/pricing";
+import Process from "./components/process";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
 const App = () => {
   return ( 
-    <div>
-      <h4>Hello World</h4>
-    </div>
+    <Router>
+      <div className="relative isolate overflow-hidden">
+        <Header/>
+
+        <main>
+          <Routes>
+            <Route path="/" element={
+              <>
+                <Hero />
+                <Features />
+                <Overview />
+              </>
+            } />
+            <Route path="/pricing" element={<Pricing />} />
+            <Route path="/process" element={<Process />} />
+          </Routes>
+        </main>
+      </div>
+    </Router>
   )
 }
 
-export default App
+export default App;

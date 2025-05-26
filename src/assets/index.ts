@@ -3,8 +3,8 @@
  * @license Apache-2.0
  */
 
-import favicon from '@/assets/favicon.svg';
-import logo from '@/assets/logo.svg';
+import favicon from '@/assets/favicon.png';
+import logo from '@/assets/logo.png';
 import heroBanner from '@/assets/hero-banner.png';
 import brand1 from '@/assets/brand-logo-1.svg';
 import brand2 from '@/assets/brand-logo-2.svg';

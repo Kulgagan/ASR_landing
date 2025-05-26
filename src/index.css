@@ -63,6 +63,16 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background 
+    text-foreground
+    h-[300vh];
+  }
+
+  @layer utilities {
+    .container {
+      @apply px-4 
+      mx-auto
+      2xl:max-w-screen-xl;
+    }
   }
 }
