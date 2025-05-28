@@ -60,9 +60,15 @@ const Hero = () => {
 
                     <motion.h2 
                     variants={heroChildVariant}
-                    className="text-4xl font-semibold !leading-tight mb-4 md:text-5xl md:mb-5 lg:text-6xl">
-                        {heroData.sectionTitle}
+                    className="text-4xl font-semibold !leading-tight mb-4 md:text-5xl md:mb-5 lg:text-6xl"
+                    >
+                    {heroData.sectionTitle.map((line, idx) => (
+                        <span key={idx} className="block">
+                        {line}
+                        </span>
+                    ))}
                     </motion.h2>
+
 
                     <motion.p 
                     variants={heroChildVariant}

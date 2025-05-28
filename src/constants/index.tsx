@@ -134,7 +134,7 @@ export const navMenu: MenuItem[] = [
 // Hero
 export const heroData = {
   sectionSubtitle: 'Break free from LeetCode. Hire like its 2025.',
-  sectionTitle: 'Interview Smarter. Hire Like Engineers Work.',
+  sectionTitle: ['Interview Smarter.', 'Hire Smarter.'],
   decoTitle: '',
   sectionText:
     'Boardly gives you a smarter way to assess engineers — with an AI interview, system design round, and real coding based on that design.',

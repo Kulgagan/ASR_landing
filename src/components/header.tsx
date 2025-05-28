@@ -12,7 +12,12 @@ import {
     NavigationMenuList,
     NavigationMenuTrigger,
     navigationMenuTriggerStyle,
-  } from "@/components/ui/navigation-menu"
+} from "@/components/ui/navigation-menu"
+import {
+    HoverCard,
+    HoverCardContent,
+    HoverCardTrigger,
+} from "@/components/ui/hover-card"
 
 //assets
 import { Menu } from "lucide-react";
@@ -28,59 +33,55 @@ const Header = () => {
                 </Link>
 
                 <NavigationMenu className="max-lg:hidden mx-auto">  
-                    <NavigationMenuList>
-                        {navMenu.map(({href, label, submenu}, index) => (   //looping over every nav item in navMenu. if it has a submenu, render dropdown, if not render link
-                            <NavigationMenuItem key={index}>
-                                {submenu ? ( //renders label if subMenu exists
-                                <>
-                                    <NavigationMenuTrigger>
-                                        {label}
-                                    </NavigationMenuTrigger>
-                                        <NavigationMenuContent>
-                                            <ul className="grid grid-cols-2 p-2 w-[640px]">
-                                                {submenu.map(({href, icon, label, desc}, index)=> (
-                                                    <li key={index}>
-                                                        <NavigationMenuLink asChild> 
-                                                            <Link 
-                                                            to={href}
-                                                            className="flex gap-3 select-none p-2 rounded-sm transition-colors hover:bg-foreground/5">
-                                                                <div className="w-10 h-10 bg-foreground/10 rounded-sm shadow-sm border-t border-foreground/5 flex-shrink-0 grid place-items-center">
-                                                                {icon}
-                                                                </div>
+                    <div className="max-lg:hidden flex items-center gap-6 mx-auto">
+                        <HoverCard>
+                            <Link to="/product">
+                            <HoverCardTrigger asChild>
+                                <Button variant="ghost" className="hover:underline underline-offset-4 border-0 hover:bg-transparent">Product</Button>
+                            </HoverCardTrigger>
+                            <HoverCardContent className="w-64">
+                                <p className="text-sm text-muted-foreground">Explore our AI-driven interview tools and code snippet generators.</p>
+                            </HoverCardContent>
+                            </Link>
+                        </HoverCard>
 
-                                                                <div>
-                                                                    <div className="text-[13px] leading-normal mb-1">
-                                                                        {label}
-                                                                    </div>
+                        <HoverCard>
+                            <Link to="/solutions">
+                            <HoverCardTrigger asChild>
+                                <Button variant="ghost" className="hover:underline underline-offset-4 border-0 hover:bg-transparent">Solutions</Button>
+                            </HoverCardTrigger>
+                            <HoverCardContent className="w-64">
+                                <p className="text-sm text-muted-foreground">For startups, enterprises, and hiring managers looking to automate interviews.</p>
+                            </HoverCardContent>
+                            </Link>
+                        </HoverCard>
 
-                                                                    <p className="text-[13px] leading-normal text-muted-foreground">
-                                                                        {desc}
-                                                                    </p>
-                                                                </div>
-                                                            </Link>
-                                                        </NavigationMenuLink>
-                                                    </li>
-                                                ))}
-                                             </ul>
-                                        </NavigationMenuContent>
-                                </>
-                                ) : (   //renders only button of subMenu doesnt exist
-                                    <NavigationMenuLink 
-                                    asChild
-                                    className={navigationMenuTriggerStyle()}
-                                    >
-                                        <Link to={href}>{label}</Link>
-                                    </NavigationMenuLink>
-                                )}
-                            </NavigationMenuItem>
-                        ))}
-                    </NavigationMenuList>
+                        <HoverCard>
+                            <Link to="/pricing">
+                            <HoverCardTrigger asChild>
+                                <Button variant="ghost" className="hover:underline underline-offset-4 border-0 hover:bg-transparent">Pricing</Button>
+                            </HoverCardTrigger>
+                            <HoverCardContent className="w-64">
+                                <p className="text-sm text-muted-foreground">Transparent pricing with flexible plans for growing teams.</p>
+                            </HoverCardContent>
+                            </Link>
+                        </HoverCard>
+
+                        <HoverCard>
+                            <HoverCardTrigger asChild>
+                                <Button variant="ghost" className="hover:underline underline-offset-4 border-0 hover:bg-transparent">About</Button>
+                            </HoverCardTrigger>
+                            <HoverCardContent className="w-64">
+                                <p className="text-sm text-muted-foreground">Learn more about Boardly's mission and team.</p>
+                            </HoverCardContent>
+                        </HoverCard>
+                    </div>
                 </NavigationMenu>
                 
                 <div className="flex items-center gap-2 justify-end max-lg:hidden">
-                    <Button variant="ghost">Sign in</Button>
+                    <Button variant="ghost" className="hover:underline underline-offset-4 border-0 hover:bg-transparent">Contact Us</Button>
                     <Link to="/pricing">
-                        <Button className="bg-purple-600 hover:bg-purple-700">Sign Up</Button>
+                        <Button className="bg-purple-600 hover:bg-purple-700 transition-colors duration-200">Sign Up</Button>
                     </Link>
                 </div>
 
@@ -110,7 +111,7 @@ export default Header;
 //1. Importing components from ui and data from nav menu(used in header)
 //2. use flex container for mobile. Use lg: for big screens. (lg: uses a 3 column layout [logo, nav, buttons]) [1fr, 3fr, 1fr] => left logo and right menu 20%. middle 60%
 //3. selecting 'icon' instead of 'default'
-//4. for navigation menu we say max-lg:hidden (hides this on screens that arent desktops)
+//4. for navigation menu we say max-lg:hidden (hides this on screens that aren't desktops)
 //5. navMenu is an array
 //6. subMenu ? (...) : (...) 
     //{submenu ? (
