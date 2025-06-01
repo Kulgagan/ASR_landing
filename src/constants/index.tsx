@@ -133,11 +133,11 @@ export const navMenu: MenuItem[] = [
 
 // Hero
 export const heroData = {
-  sectionSubtitle: 'Break free from LeetCode. Hire like its 2025.',
+  sectionSubtitle: 'Automate your hiring process.',
   sectionTitle: ['Interview Smarter.', 'Hire Smarter.'],
   decoTitle: '',
   sectionText:
-    'Boardly gives you a smarter way to assess engineers — with an AI interview, system design round, and real coding based on that design.',
+    'Boardly gives you a smarter way to assess engineers — with a 3-part hands free interview process.',
 };
 
 // Feature
@@ -236,7 +236,7 @@ export const reviewData = {
   sectionTitle: 'What Our Customers Are Says',
   reviewCard: [
     {
-      title: 'We’re building a better application now, thanks to AnalytiX.',
+      title: 'Were building a better application now, thanks to AnalytiX.',
       text: 'Our application is undergoing significant improvements with the help of NioLand, resulting in enhanced functionality, improved user experience',
       reviewAuthor: 'Wade Warren',
       date: '3month ago',

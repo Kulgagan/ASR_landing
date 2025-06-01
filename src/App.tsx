@@ -6,6 +6,7 @@ import Features from "./components/features";
 import Overview from "./components/overview";
 import Pricing from "./components/pricing";
 import Process from "./components/process";
+import Contact from "./components/contact";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 const App = () => {
@@ -25,6 +26,7 @@ const App = () => {
             } />
             <Route path="/pricing" element={<Pricing />} />
             <Route path="/process" element={<Process />} />
+            <Route path="/contact" element={<Contact />} />
           </Routes>
         </main>
       </div>

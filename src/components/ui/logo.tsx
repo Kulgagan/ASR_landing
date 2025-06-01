@@ -15,7 +15,7 @@ const Logo = ({variant = 'default'}: LogoProps) => {    // destructuring 'varian
             )}
 
             {variant === 'icon' && (    // if variant is 'icon', render the smaller favicon
-                <img src={favicon} alt="Boardly Logo" width={60} height={32}/>
+                <img src={logo} alt="Boardly Logo" width={160} height={32}/>
             )}
         </a>
     )

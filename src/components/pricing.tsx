@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import type { Variants } from "framer-motion";
 import { Button } from "./ui/button";
 import { Check, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const pricingVariant: Variants = {
     start: {},
@@ -30,7 +31,8 @@ const pricingCardVariant: Variants = {
 const plans = [
     {
         name: "Starter",
-        price: "$99",
+        price: "$199",
+        originalPrice: "$499",
         description: "Perfect for small teams starting with technical interviews",
         features: [
             "Up to 10 interviews per month",
@@ -46,7 +48,8 @@ const plans = [
     },
     {
         name: "Professional",
-        price: "$299",
+        price: "$499",
+        originalPrice: "$1499",
         description: "Ideal for growing companies with regular hiring needs",
         features: [
             "Up to 50 interviews per month",
@@ -86,7 +89,7 @@ const plans = [
 
 const Pricing = () => {
     return (
-        <section className="py-32 relative overflow-hidden">
+        <section id="pricing" className="py-16 md:py-24 relative overflow-hidden">
             {/* Background gradient */}
             <div className="absolute inset-0 bg-gradient-to-b from-background via-background/50 to-background/80 -z-10" />
             
@@ -124,7 +127,7 @@ const Pricing = () => {
                             key={index}
                             variants={pricingCardVariant}
                             className={`relative group rounded-2xl p-8 bg-gradient-to-br ${plan.color} border border-slate-800/50 backdrop-blur-3xl hover:border-primary/50 transition-all duration-300 ${
-                                plan.popular ? 'md:scale-105' : ''
+                                plan.popular ? 'md:scale-110' : ''
                             }`}
                         >
                             {plan.popular && (
@@ -135,7 +138,15 @@ const Pricing = () => {
                             <div className="absolute inset-0 bg-gradient-to-br from-background/50 to-background/80 rounded-2xl" />
                             <div className="relative">
                                 <h3 className="text-2xl font-semibold mb-2">{plan.name}</h3>
-                                <div className="text-4xl font-bold mb-2">{plan.price}<span className="text-lg font-normal text-muted-foreground">/mo</span></div>
+                                <div className="flex items-center gap-2 mb-2">
+                                    <div className="text-4xl font-bold">{plan.price}</div>
+                                    {plan.originalPrice && (
+                                        <div className="text-lg font-normal text-muted-foreground line-through">
+                                            {plan.originalPrice}
+                                        </div>
+                                    )}
+                                    <span className="text-lg font-normal text-muted-foreground">/mo</span>
+                                </div>
                                 <p className="text-muted-foreground mb-6">{plan.description}</p>
                                 
                                 <ul className="space-y-4 mb-8">
@@ -152,12 +163,39 @@ const Pricing = () => {
                                     className="w-full group"
                                     variant={plan.popular ? "default" : "outline"}
                                 >
-                                    {plan.buttonText}
-                                    {!plan.popular && <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />}
+                                    <Link to="/contact" className="flex items-center w-full justify-center">
+                                        {plan.buttonText}
+                                        {!plan.popular && <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />}
+                                    </Link>
                                 </Button>
                             </div>
                         </motion.div>
                     ))}
+                </motion.div>
+
+                <motion.div
+                    variants={pricingCardVariant}
+                    initial="start"
+                    whileInView="end"
+                    viewport={{ once: true }}
+                    className="text-center mt-20 max-w-2xl mx-auto"
+                >
+                    <div className="relative group rounded-2xl p-8 bg-gradient-to-br from-blue-500/20 to-purple-500/20 border border-slate-800/50 backdrop-blur-3xl hover:border-primary/50 transition-all duration-300">
+                        <div className="absolute inset-0 bg-gradient-to-br from-background/50 to-background/80 rounded-2xl" />
+                        <div className="relative">
+                            <h3 className="text-2xl font-semibold mb-4">Intrested in revolutionizing your hiring process?</h3>
+                            <p className="text-muted-foreground mb-6">Contact our sales team to discuss your specific requirements and get a tailored quote.</p>
+                            <Button 
+                                size="lg" 
+                                className="group bg-purple-600 hover:bg-purple-700"
+                            >
+                                <Link to="/contact" className="flex items-center">
+                                    Contact Us!!
+                                    <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+                                </Link>
+                            </Button>
+                        </div>
+                    </div>
                 </motion.div>
             </div>
         </section>

@@ -35,24 +35,46 @@ const Header = () => {
                 <NavigationMenu className="max-lg:hidden mx-auto">  
                     <div className="max-lg:hidden flex items-center gap-6 mx-auto">
                         <HoverCard>
-                            <Link to="/product">
-                            <HoverCardTrigger asChild>
-                                <Button variant="ghost" className="hover:underline underline-offset-4 border-0 hover:bg-transparent">Product</Button>
-                            </HoverCardTrigger>
-                            <HoverCardContent className="w-64">
-                                <p className="text-sm text-muted-foreground">Explore our AI-driven interview tools and code snippet generators.</p>
-                            </HoverCardContent>
+                            <Link to="/">
+                                <HoverCardTrigger asChild>
+                                    <Button 
+                                        variant="ghost" 
+                                        className="hover:underline underline-offset-4 border-0 hover:bg-transparent"
+                                        onClick={() => {
+                                            const featuresSection = document.getElementById('features');
+                                            if (featuresSection) {
+                                                featuresSection.scrollIntoView({ behavior: 'smooth' });
+                                            }
+                                        }}
+                                    >
+                                        Product
+                                    </Button>
+                                </HoverCardTrigger>
+                                <HoverCardContent className="w-64">
+                                    <p className="text-sm text-muted-foreground">Explore our AI-driven interview tools and code snippet generators.</p>
+                                </HoverCardContent>
                             </Link>
                         </HoverCard>
 
                         <HoverCard>
-                            <Link to="/solutions">
-                            <HoverCardTrigger asChild>
-                                <Button variant="ghost" className="hover:underline underline-offset-4 border-0 hover:bg-transparent">Solutions</Button>
-                            </HoverCardTrigger>
-                            <HoverCardContent className="w-64">
-                                <p className="text-sm text-muted-foreground">For startups, enterprises, and hiring managers looking to automate interviews.</p>
-                            </HoverCardContent>
+                            <Link to="/">
+                                <HoverCardTrigger asChild>
+                                    <Button 
+                                        variant="ghost" 
+                                        className="hover:underline underline-offset-4 border-0 hover:bg-transparent"
+                                        onClick={() => {
+                                            const overviewSection = document.getElementById('overview');
+                                            if (overviewSection) {
+                                                overviewSection.scrollIntoView({ behavior: 'smooth' });
+                                            }
+                                        }}
+                                    >
+                                        Solutions
+                                    </Button>
+                                </HoverCardTrigger>
+                                <HoverCardContent className="w-64">
+                                    <p className="text-sm text-muted-foreground">For startups, enterprises, and hiring managers looking to automate interviews.</p>
+                                </HoverCardContent>
                             </Link>
                         </HoverCard>
 
@@ -79,9 +101,8 @@ const Header = () => {
                 </NavigationMenu>
                 
                 <div className="flex items-center gap-2 justify-end max-lg:hidden">
-                    <Button variant="ghost" className="hover:underline underline-offset-4 border-0 hover:bg-transparent">Contact Us</Button>
-                    <Link to="/pricing">
-                        <Button className="bg-purple-600 hover:bg-purple-700 transition-colors duration-200">Sign Up</Button>
+                    <Link to="/contact">
+                        <Button variant="ghost" className="hover:underline underline-offset-4 border-0 hover:bg-transparent">Contact Us</Button>
                     </Link>
                 </div>
 

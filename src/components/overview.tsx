@@ -55,7 +55,7 @@ const stats = [
 
 const Overview = () => {
     return (
-        <section className="py-32 relative overflow-hidden">
+        <section id="overview" className="py-16 md:py-24 relative overflow-hidden">
             {/* Background gradient */}
             <div className="absolute inset-0 bg-gradient-to-b from-background via-background/50 to-background/80 -z-10" />
             
@@ -65,7 +65,7 @@ const Overview = () => {
                     initial="start"
                     whileInView="end"
                     viewport={{ once: true }}
-                    className="text-center mb-20"
+                    className="text-center mb-12"
                 >
                     <motion.h2 
                         variants={overviewItemVariant}
@@ -106,7 +106,7 @@ const Overview = () => {
                     initial="start"
                     whileInView="end"
                     viewport={{ once: true }}
-                    className="text-center mt-20"
+                    className="text-center mt-12"
                 >
                     <Link to="/pricing">
                         <Button size="lg" className="group bg-purple-600 hover:bg-purple-700">

@@ -128,9 +128,9 @@ const Hero = () => {
                         height={815} 
                         alt="Boardly dashboard" />
                     </motion.figure>
-                    {/* Blurry glow */}
+{/* Blurry glow */}
                     <motion.div 
-                    className="absolute bg-primary inset-5 blur-[50px] -z-10"
+                    className="absolute bg-cyan-600 inset-5 blur-[50px] -z-10"
                     initial={{
                         scale: 0.8,
                         opacity: 0,
@@ -148,7 +148,7 @@ const Hero = () => {
 
                     ></motion.div>
                     <motion.div 
-                    className="absolute inset-0 bg-primary blur-[200px] scale-y-75 scale-x-125 rounded-full -z-10"
+                    className="absolute inset-0 bg-cyan-600 blur-[200px] scale-y-75 scale-x-125 rounded-full -z-10"
                     initial={{
                         scale:0.4, 
                         opacity: 0
@@ -175,3 +175,12 @@ export default Hero
 //outer div controls the padding, width, background
 //p renders paragraph. h2 renders a main heading. Title of the hero section
 //span used to highlight or decorate part of title
+
+/*
+    Blue (blue-600/blue-700)
+    Green (green-600/green-700)
+    Red (red-600/red-700)
+    Orange (orange-600/orange-700)
+    Pink (pink-600/pink-700)
+    Indigo (indigo-600/indigo-700)
+    Cyan (cyan-600/cyan-700) */
