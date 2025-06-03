@@ -1,21 +1,23 @@
-// assets
-import { logo } from "@/assets";   // importing logo from the assets module
+import { cn } from "@/lib/utils"
+import { Link } from "react-router-dom"
+import { Button } from "./button"
 
-type LogoProps = {
-    variant?: 'default' | 'icon';   // defines the optional prop 'variant' which can be 'default' or 'icon'
+interface LogoProps {
+    variant?: "default" | "icon"
+    className?: string
 }
 
-const Logo = ({variant = 'default'}: LogoProps) => {    // destructuring 'variant' with a default value of 'default'
+const Logo = ({ variant = "default", className }: LogoProps) => {
     return (
-        <a href="/" className="block">
-            {variant === 'default' && (     // if variant is 'default', render the full logo
-                <img src={logo} alt="Boardly Logo" width={170} height={40}/>
-            )}
-
-            {variant === 'icon' && (    // if variant is 'icon', render the smaller favicon
-                <img src={logo} alt="Boardly Logo" width={160} height={32}/>
-            )}
-        </a>
+        <Link to="/">
+            <Button variant="ghost" className={cn("hover:bg-transparent", className)}>
+                {variant === "default" ? (
+                    <span className="text-xl font-semibold">Boardly</span>
+                ) : (
+                    <span className="text-xl font-semibold">B</span>
+                )}
+            </Button>
+        </Link>
     )
 }
 

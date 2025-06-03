@@ -148,33 +148,33 @@ export const featureData = {
     'Unleash the power of our platform with a multitude of powerful features, empowering you to achieve your goals.',
   features: [
     {
-      icon: <ChartPie size={32} />,
+      icon: "ChartPie",
       iconBoxColor: 'bg-blue-600',
       title: 'Advance Analytics',
       desc: 'Experience advanced analytics capabilities that enable you to dive deep into data, uncover meaningful patterns, and derive actionable insights',
       imgSrc: feature1,
     },
     {
-      icon: <Files size={32} />,
+      icon: "Files",
       iconBoxColor: 'bg-cyan-500',
       title: 'Automated Reports',
       desc: 'Save time and effort with automated reporting, generating comprehensive and accurate reports automatically, streamlining your data analysis',
       imgSrc: feature2,
     },
     {
-      icon: <UserRoundPen size={32} />,
+      icon: "UserRoundPen",
       iconBoxColor: 'bg-yellow-500',
       title: 'Retention Report',
       desc: 'Enhance retention with our report, maximizing customer engagement and loyalty for business',
     },
     {
-      icon: <GitFork size={32} />,
+      icon: "GitFork",
       iconBoxColor: 'bg-red-500',
       title: 'A/B Test Variants',
       desc: 'Efficiently compare A/B test variants to determine the most effective strategies',
     },
     {
-      icon: <Blocks size={32} />,
+      icon: "Blocks",
       iconBoxColor: 'bg-purple-500',
       title: 'Integration Directory',
       desc: 'Seamlessly integrate with our directory, maximizing efficiency and unlocking the full potentials',
@@ -190,19 +190,19 @@ export const processData = {
     'Discover how it works by leveraging advanced algorithms and data analysis techniques.',
   list: [
     {
-      icon: <LaptopMinimal size={32} />,
+      icon: "LaptopMinimal",
       title: 'Create your account',
       text: 'Join us now and create your account to start exploring our platform and unlocking exciting features.',
     },
     {
-      icon: <ArrowBigDownDash size={32} />,
+      icon: "ArrowBigDownDash",
       title: 'Install our tracking app',
       text: 'Install our tracking app to effortlessly monitor and manage your activities, gaining valuable insights and optimizing your performance.',
     },
     {
-      icon: <CreditCard size={32} />,
-      title: 'Start tracking your website',
-      text: 'Start tracking your website effortlessly to gain valuable insights into visitor behavior, performance metrics, and optimization opportunities.',
+      icon: "CreditCard",
+      title: 'Add your payment method',
+      text: 'Add your payment method to unlock premium features and enjoy a seamless experience with our platform.',
     },
   ],
 };
