@@ -22,18 +22,6 @@ import {
   Terminal,
   Package,
   SquareMousePointer,
-  ChartPie,
-  Files,
-  UserRoundPen,
-  GitFork,
-  LaptopMinimal,
-  ArrowBigDownDash,
-  CreditCard,
-  Twitter,
-  Github,
-  Linkedin,
-  Instagram,
-  Youtube,
 } from 'lucide-react';
 
 import {
@@ -421,7 +409,8 @@ export const footerData = {
   ],
 };
 
-const plans = [
+// Pricing Plans
+export const plans = [
     {
         name: "Starter",
         price: "$199",
