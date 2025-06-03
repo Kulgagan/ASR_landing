@@ -5,12 +5,8 @@ import { Link } from "react-router-dom"
 
 //Components
 import { Button } from "./ui/button"
-import { Dialog, DialogTrigger, DialogContent } from "./ui/dialog"
-import { AspectRatio } from "./ui/aspect-ratio"
-import ReactPlayer from 'react-player/youtube'
 //assests
 import { heroBanner } from "@/assets"
-import { CirclePlay } from "lucide-react"
 
 //Constants
 import { heroData } from "@/constants"
@@ -77,7 +73,7 @@ const Hero = () => {
                     variants={heroChildVariant}
                     className="flex justify-center gap-2 mt-6 md:mt-10">
                         <Link to="/pricing">
-                            <Button className="bg-blue-600 hover:bg-blue-700">Sign Up</Button>
+                            <Button className="bg-blue-600 hover:bg-blue-700">View Pricing</Button>
                         </Link>
                         
                         {/* Watch Demo Button - Preserved for future use

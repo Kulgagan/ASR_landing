@@ -37,13 +37,13 @@ const values = [
     },
     {
         title: "Our Team",
-        description: "A diverse group of tech enthusiasts, AI experts, and HR professionals working together to transform the hiring landscape.",
+        description: "A hungry team of technical university students working together to transform the hiring landscape.",
         icon: <Users className="h-8 w-8" />,
         color: "from-purple-500/20 to-pink-500/20"
     },
     {
         title: "Our Impact",
-        description: "We've helped thousands of companies make better hiring decisions and provided a better experience for candidates worldwide.",
+        description: "We help companies make better hiring decisions and provided a better experience for candidates worldwide.",
         icon: <Award className="h-8 w-8" />,
         color: "from-pink-500/20 to-orange-500/20"
     }
