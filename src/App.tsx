@@ -7,6 +7,7 @@ import Overview from "./components/overview";
 import Pricing from "./components/pricing";
 import Process from "./components/process";
 import Contact from "./components/contact";
+import About from "./components/about";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 const App = () => {
@@ -22,6 +23,9 @@ const App = () => {
                 <Hero />
                 <Features />
                 <Overview />
+                <Process />
+                <Pricing />
+                <About />
               </>
             } />
             <Route path="/pricing" element={<Pricing />} />

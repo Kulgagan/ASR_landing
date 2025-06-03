@@ -20,6 +20,11 @@ const MobileMenu = ({navMenu}: MobileMenuProps) => {
             if (overviewSection) {
                 overviewSection.scrollIntoView({ behavior: 'smooth' });
             }
+        } else if (href === '/' && label === 'About') {
+            const aboutSection = document.getElementById('about');
+            if (aboutSection) {
+                aboutSection.scrollIntoView({ behavior: 'smooth' });
+            }
         }
     };
 

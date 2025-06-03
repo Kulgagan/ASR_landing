@@ -78,9 +78,10 @@ const Hero = () => {
                     variants={heroChildVariant}
                     className="flex justify-center gap-2 mt-6 md:mt-10">
                         <Link to="/pricing">
-                            <Button className="bg-purple-600 hover:bg-purple-700">Sign Up</Button>
+                            <Button className="bg-blue-600 hover:bg-blue-700">Sign Up</Button>
                         </Link>
                         
+                        {/* Watch Demo Button - Preserved for future use
                         <Dialog>
                             <DialogTrigger asChild>
                             <Button 
@@ -99,6 +100,7 @@ const Hero = () => {
                                 </AspectRatio>
                             </DialogContent>
                         </Dialog>  
+                        */}
                     </motion.div>
                 </div>
 
@@ -130,7 +132,7 @@ const Hero = () => {
                     </motion.figure>
 {/* Blurry glow */}
                     <motion.div 
-                    className="absolute bg-cyan-600 inset-5 blur-[50px] -z-10"
+                    className="absolute bg-blue-600 inset-5 blur-[50px] -z-10"
                     initial={{
                         scale: 0.8,
                         opacity: 0,
@@ -148,7 +150,7 @@ const Hero = () => {
 
                     ></motion.div>
                     <motion.div 
-                    className="absolute inset-0 bg-cyan-600 blur-[200px] scale-y-75 scale-x-125 rounded-full -z-10"
+                    className="absolute inset-0 bg-blue-600 blur-[200px] scale-y-75 scale-x-125 rounded-full -z-10"
                     initial={{
                         scale:0.4, 
                         opacity: 0

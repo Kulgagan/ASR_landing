@@ -90,12 +90,25 @@ const Header = () => {
                         </HoverCard>
 
                         <HoverCard>
-                            <HoverCardTrigger asChild>
-                                <Button variant="ghost" className="hover:underline underline-offset-4 border-0 hover:bg-transparent">About</Button>
-                            </HoverCardTrigger>
-                            <HoverCardContent className="w-64">
-                                <p className="text-sm text-muted-foreground">Learn more about Boardly's mission and team.</p>
-                            </HoverCardContent>
+                            <Link to="/">
+                                <HoverCardTrigger asChild>
+                                    <Button 
+                                        variant="ghost" 
+                                        className="hover:underline underline-offset-4 border-0 hover:bg-transparent"
+                                        onClick={() => {
+                                            const aboutSection = document.getElementById('about');
+                                            if (aboutSection) {
+                                                aboutSection.scrollIntoView({ behavior: 'smooth' });
+                                            }
+                                        }}
+                                    >
+                                        About
+                                    </Button>
+                                </HoverCardTrigger>
+                                <HoverCardContent className="w-64">
+                                    <p className="text-sm text-muted-foreground">Learn more about Boardly's mission and team.</p>
+                                </HoverCardContent>
+                            </Link>
                         </HoverCard>
                     </div>
                 </NavigationMenu>

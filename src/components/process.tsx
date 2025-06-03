@@ -119,7 +119,7 @@ const Process = () => {
                     className="text-center mt-12"
                 >
                     <Link to="/pricing">
-                        <Button size="lg" className="group bg-purple-600 hover:bg-purple-700">
+                        <Button size="lg" className="group bg-blue-600 hover:bg-blue-700">
                             Sign Up
                             <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
                         </Button>
