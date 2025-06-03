@@ -1,6 +1,7 @@
 import { cn } from "@/lib/utils"
 import { Link } from "react-router-dom"
 import { Button } from "./button"
+import logo from "@/assets/logo.png"
 
 interface LogoProps {
     variant?: "default" | "icon"
@@ -12,9 +13,9 @@ const Logo = ({ variant = "default", className }: LogoProps) => {
         <Link to="/">
             <Button variant="ghost" className={cn("hover:bg-transparent", className)}>
                 {variant === "default" ? (
-                    <span className="text-xl font-semibold">Boardly</span>
+                    <img src={logo} alt="Boardly Logo" className="h-14" />
                 ) : (
-                    <span className="text-xl font-semibold">B</span>
+                    <img src={logo} alt="Boardly Logo" className="h-12" />
                 )}
             </Button>
         </Link>
