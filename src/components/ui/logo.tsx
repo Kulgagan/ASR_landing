@@ -1,7 +1,5 @@
-import React from "react";
-
 // assets
-import { favicon, logo } from "@/assets";   // importing favicon and logo from the assets module
+import { logo } from "@/assets";   // importing logo from the assets module
 
 type LogoProps = {
     variant?: 'default' | 'icon';   // defines the optional prop 'variant' which can be 'default' or 'icon'

@@ -14,7 +14,6 @@ import { CirclePlay } from "lucide-react"
 
 //Constants
 import { heroData } from "@/constants"
-import { transcode } from "buffer";
 
 //Framer motion varaints
 const heroVariant: Variants = {

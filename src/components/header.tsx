@@ -6,12 +6,6 @@ import MobileMenu from "./ui/mobileMenu";
 import { Link } from "react-router-dom";
 import {
     NavigationMenu,
-    NavigationMenuContent,
-    NavigationMenuItem,
-    NavigationMenuLink,
-    NavigationMenuList,
-    NavigationMenuTrigger,
-    navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"
 import {
     HoverCard,
