@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import type { Variants } from "framer-motion";
-import { Mail, Phone, MapPin, Linkedin, Twitter } from "lucide-react";
+import { Mail, Phone, MapPin, Linkedin } from "lucide-react";
 
 const contactVariant: Variants = {
     start: {},
@@ -28,31 +28,25 @@ const contactCardVariant: Variants = {
 
 const teamMembers = [
     {
-        name: "Diddy",
-        role: "Sales Director",
-        email: "diddy@boardly.com",
-        phone: "+1 (555) 123-4567",
+        name: "Adil Sajid",
+        role: "CTO",
+        email: "adilsajid452@gmail.com",
         location: "Edmonton, AB",
-        linkedin: "linkedin.com/in/diddy",
-        twitter: "@diddy"
+        linkedin: "linkedin.com/in/diddy"
     },
     {
-        name: "Diddy",
-        role: "Sales Director",
-        email: "diddy@boardly.com",
-        phone: "+1 (555) 123-4567",
+        name: "Kulgagan Bajwa",
+        role: "CEO",
+        email: "kulgagan08@gmail.com",
         location: "Edmonton, AB",
-        linkedin: "linkedin.com/in/diddy",
-        twitter: "@diddy"
+        linkedin: "linkedin.com/in/diddy"
     },
     {
-        name: "Diddy",
-        role: "Sales Director",
-        email: "diddy@boardly.com",
-        phone: "+1 (555) 123-4567",
+        name: "Hammad Zubair",
+        role: "COO",
+        email: "hammadzubair@hotmail.com",
         location: "Edmonton, AB",
-        linkedin: "linkedin.com/in/diddy",
-        twitter: "@diddy"
+        linkedin: "linkedin.com/in/diddy"
     }
 ];
 
@@ -110,12 +104,6 @@ const Contact = () => {
                                         </a>
                                     </li>
                                     <li className="flex items-center gap-2">
-                                        <Phone className="h-5 w-5 text-primary" />
-                                        <a href={`tel:${member.phone}`} className="hover:text-primary transition-colors">
-                                            {member.phone}
-                                        </a>
-                                    </li>
-                                    <li className="flex items-center gap-2">
                                         <MapPin className="h-5 w-5 text-primary" />
                                         <span>{member.location}</span>
                                     </li>
@@ -123,12 +111,6 @@ const Contact = () => {
                                         <Linkedin className="h-5 w-5 text-primary" />
                                         <a href={`https://${member.linkedin}`} target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
                                             LinkedIn
-                                        </a>
-                                    </li>
-                                    <li className="flex items-center gap-2">
-                                        <Twitter className="h-5 w-5 text-primary" />
-                                        <a href={`https://twitter.com/${member.twitter.replace('@', '')}`} target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
-                                            {member.twitter}
                                         </a>
                                     </li>
                                 </ul>
