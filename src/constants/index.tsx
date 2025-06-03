@@ -400,23 +400,23 @@ export const footerData = {
   socialLinks: [
     {
       href: 'https://x.com/codewithsadee_',
-      icon: <Twitter size={18} />,
+      icon: "Twitter"
     },
     {
       href: 'https://github.com/codewithsadee',
-      icon: <Github size={18} />,
+      icon: "Github"
     },
     {
       href: 'https://www.linkedin.com/in/codewithsadee/',
-      icon: <Linkedin size={18} />,
+      icon: "Linkedin"
     },
     {
       href: 'https://www.instagram.com/codewithsadee',
-      icon: <Instagram size={18} />,
+      icon: "Instagram"
     },
     {
       href: 'https://www.youtube.com/codewithsadee',
-      icon: <Youtube size={18} />,
+      icon: "Youtube"
     },
   ],
 };

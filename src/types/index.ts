@@ -24,7 +24,7 @@ export type IconMap = {
 }
 
 export type FeatureItem = {
-    icon: ReactNode;
+    icon: string;
     iconBoxColor: string;
     title: string;
     desc: string;
@@ -32,7 +32,7 @@ export type FeatureItem = {
 };
 
 export type ProcessItem = {
-    icon: ReactNode;
+    icon: string;
     title: string;
     text: string;
 };

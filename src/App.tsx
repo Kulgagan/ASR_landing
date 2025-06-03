@@ -8,6 +8,7 @@ import Pricing from "./components/pricing";
 import Process from "./components/process";
 import Contact from "./components/contact";
 import About from "./components/about";
+import Footer from "./components/footer";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 const App = () => {
@@ -32,6 +33,8 @@ const App = () => {
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </main>
+
+        <Footer />
       </div>
     </Router>
   )

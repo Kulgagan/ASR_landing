@@ -4,9 +4,7 @@ import {Popover, PopoverContent, PopoverTrigger} from "@/components/ui/popover"
 import Logo from "@/components/ui/logo";
 import MobileMenu from "./ui/mobileMenu";
 import { Link } from "react-router-dom";
-import {
-    NavigationMenu,
-} from "@/components/ui/navigation-menu"
+import { NavigationMenu } from "@/components/ui/navigation-menu"
 import {
     HoverCard,
     HoverCardContent,
