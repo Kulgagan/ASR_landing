@@ -39,14 +39,14 @@ const teamMembers = [
         role: "CEO",
         email: "kulgagan08@gmail.com",
         location: "Edmonton, AB",
-        linkedin: "https://www.linkedin.com/in/kulgagan/"
+        linkedin: "linkedin.com/in/kulgagan"
     },
     {
         name: "Hammad Zubair",
         role: "COO",
         email: "hammadzubair@hotmail.com",
         location: "Edmonton, AB",
-        linkedin: "https://www.linkedin.com/in/hammad-zubair-20a2a6344/"
+        linkedin: "linkedin.com/in/hammad-zubair-20a2a6344"
     }
 ];
 
