@@ -30,20 +30,20 @@ const processItemVariant: Variants = {
 
 const steps = [
     {
-        title: "AI Behavioral Interview",
-        description: "Our AI conducts a comprehensive behavioral interview, analyzing responses in real-time to assess soft skills and cultural fit.",
+        title: "Premium Service",
+        description: "We provide a premium service to our customers, ensuring that they are satisfied with the service they receive.",
         icon: <MessageSquare className="h-8 w-8" />,
         color: "from-blue-500/20 to-purple-500/20"
     },
     {
-        title: "Interactive Whiteboard",
-        description: "Candidates showcase their system design skills on our intuitive whiteboard platform, creating and explaining their architectural decisions.",
+        title: "Material Supply",
+        description: "We supply and deliver high-quality materials to our customers, ensuring that they are satisfied with the materials they receive.",
         icon: <Pencil className="h-8 w-8" />,
         color: "from-purple-500/20 to-pink-500/20"
     },
     {
-        title: "AI Technical Assessment",
-        description: "Our AI analyzes the whiteboard session and generates personalized technical challenges based on the candidate's system design approach.",
+        title: "Flexible Project Support",
+        description: "We provide flexible project support to our customers, ensuring that they are satisfied with the project they receive.",
         icon: <BrainCircuit className="h-8 w-8" />,
         color: "from-pink-500/20 to-orange-500/20"
     }
@@ -67,13 +67,13 @@ const Process = () => {
                         variants={processItemVariant}
                         className="text-4xl font-semibold mb-6 md:text-5xl lg:text-6xl"
                     >
-                        How Boardly Works
+                        How ASR Works
                     </motion.h2>
                     <motion.p 
                         variants={processItemVariant}
                         className="text-muted-foreground text-lg max-w-2xl mx-auto"
                     >
-                        Our three-stage interview process combines AI-powered assessment with interactive technical evaluation
+                        Our three-stage hauling process combines premium service with material supply and flexible project support.
                     </motion.p>
                 </motion.div>
 
@@ -120,7 +120,7 @@ const Process = () => {
                 >
                     <Link to="/pricing">
                         <Button size="lg" className="group bg-blue-600 hover:bg-blue-700">
-                            Sign Up
+                            Contact Us
                             <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
                         </Button>
                     </Link>

@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 import type { Variants } from "framer-motion";
 import { Mail, Phone, MapPin, Linkedin } from "lucide-react";

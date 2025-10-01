@@ -31,19 +31,19 @@ const aboutItemVariant: Variants = {
 const values = [
     {
         title: "Our Mission",
-        description: "To revolutionize technical hiring by making it more efficient, fair, and insightful through AI-powered assessment.",
+        description: "To transform the hauling industry by delivering the best service, and materials, on time, every time.",
         icon: <Target className="h-8 w-8" />,
         color: "from-blue-500/20 to-purple-500/20"
     },
     {
         title: "Our Team",
-        description: "A hungry team of technical university students working together to transform the hiring landscape.",
+        description: "A hungry team of professionals working together to transform the hauling landscape.",
         icon: <Users className="h-8 w-8" />,
         color: "from-purple-500/20 to-pink-500/20"
     },
     {
         title: "Our Impact",
-        description: "We help companies make better hiring decisions and provided a better experience for candidates worldwide.",
+        description: "We help companies make better hauling decisions and provided a better experience for customers worldwide.",
         icon: <Award className="h-8 w-8" />,
         color: "from-pink-500/20 to-orange-500/20"
     }
@@ -67,13 +67,13 @@ const About = () => {
                         variants={aboutItemVariant}
                         className="text-4xl font-semibold mb-6 md:text-5xl lg:text-6xl"
                     >
-                        About Boardly
+                        About ASR
                     </motion.h2>
                     <motion.p 
                         variants={aboutItemVariant}
                         className="text-muted-foreground text-lg max-w-2xl mx-auto"
                     >
-                        We're on a mission to transform technical hiring through innovative AI-powered solutions
+                        We're on a mission to transform hauling through premium service.
                     </motion.p>
                 </motion.div>
 
@@ -113,10 +113,10 @@ const About = () => {
                         <div className="absolute inset-0 bg-gradient-to-br from-background/50 to-background/80 rounded-2xl" />
                         <div className="relative">
                             <h3 className="text-2xl font-semibold mb-4">Join Our Journey</h3>
-                            <p className="text-muted-foreground mb-6">Be part of the future of technical hiring. Experience how AI can transform your recruitment process.</p>
+                            <p className="text-muted-foreground mb-6">Be part of the future of hauling. Experience how premium service can transform your hauling process.</p>
                             <Link to="/contact">
                                 <Button size="lg" className="group bg-blue-600 hover:bg-blue-700">
-                                    Get Started
+                                    Contact Us
                                     <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
                                 </Button>
                             </Link>

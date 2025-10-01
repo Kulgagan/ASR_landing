@@ -33,23 +33,23 @@ const overviewItemVariant: Variants = {
 const stats = [
     {
         value: "85%",
-        label: "Better Hiring Decisions",
-        description: "More accurate candidate assessment through AI analysis"
+        label: "Better Hauling Decisions",
+        description: "More accurate hauling decisions through premium service"
     },
     {
         value: "60%",
         label: "Time Saved",
-        description: "Reduced interview time with automated processes"
+        description: "Reduced hauling time with premium service"
     },
     {
         value: "10k+",
-        label: "Interviews Conducted",
-        description: "Successfully completed technical interviews"
+        label: "Hauls Conducted",
+        description: "Successfully completed hauls"
     },
     {
-        value: "92%",
-        label: "Candidate Satisfaction",
-        description: "Positive feedback from interview experience"
+        value: "9*%",
+        label: "Customer Satisfaction",
+        description: "Positive feedback from customer experience"
     }
 ];
 
@@ -71,13 +71,13 @@ const Overview = () => {
                         variants={overviewItemVariant}
                         className="text-4xl font-semibold mb-6 md:text-5xl lg:text-6xl"
                     >
-                        Why Choose Boardly?
+                        Why Choose ASR?
                     </motion.h2>
                     <motion.p 
                         variants={overviewItemVariant}
                         className="text-muted-foreground text-lg max-w-2xl mx-auto"
                     >
-                        Transform your technical hiring process with our AI-powered interview platform. Get better candidates, faster.
+                        Transform your hauling process with our premium service. Get the best materials, delivered on time, every time.
                     </motion.p>
                 </motion.div>
 
@@ -108,9 +108,9 @@ const Overview = () => {
                     viewport={{ once: true }}
                     className="text-center mt-12"
                 >
-                    <Link to="/pricing">
+                    <Link to="/contact">
                         <Button size="lg" className="group bg-blue-600 hover:bg-blue-700">
-                            Sign Up
+                            Contact Us
                             <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
                         </Button>
                     </Link>

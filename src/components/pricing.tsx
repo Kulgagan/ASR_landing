@@ -1,3 +1,4 @@
+/*
 import { motion } from "framer-motion";
 import type { Variants } from "framer-motion";
 import { Button } from "./ui/button";
@@ -90,7 +91,7 @@ const plans = [
 const Pricing = () => {
     return (
         <section id="pricing" className="py-16 md:py-24 relative overflow-hidden">
-            {/* Background gradient */}
+            {/* Background gradient }
             <div className="absolute inset-0 bg-gradient-to-b from-background via-background/50 to-background/80 -z-10" />
             
             <div className="container">
@@ -203,3 +204,4 @@ const Pricing = () => {
 };
 
 export default Pricing; 
+*/

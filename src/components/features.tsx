@@ -30,30 +30,31 @@ const featureCardVariant: Variants = {
 
 const features = [
     {
-        title: "AI Behavioral Interview",
-        description: "Our AI interviewer conducts comprehensive behavioral interviews, analyzing responses in real-time to assess soft skills and cultural fit.",
-        image: "🤖",
+        title: "Reliable Hauling Services",
+        description: "We provide dependable dump trucking for construction, landscaping, and commercial projects, ensuring your materials are delivered on time, every time.",
+        image: "🚚",
         color: "from-blue-500/20 to-purple-500/20"
     },
     {
-        title: "Interactive Whiteboard",
-        description: "Candidates showcase their system design skills on our intuitive whiteboard platform, creating and explaining their architectural decisions.",
-        image: "📝",
+        title: "Material Supply",
+        description: "From gravel and sand to topsoil and fill dirt, we supply and deliver high-quality materials directly to your job site.",
+        image: "⛏️",
         color: "from-purple-500/20 to-pink-500/20"
     },
     {
-        title: "AI Technical Assessment",
-        description: "Our AI analyzes the whiteboard session and generates personalized technical challenges based on the candidate's system design approach.",
-        image: "🎯",
+        title: "Flexible Project Support",
+        description: "Whether it’s a single load or ongoing hauling support, our fleet adapts to meet the unique demands of your project schedule.",
+        image: "📦",
         color: "from-pink-500/20 to-orange-500/20"
     },
     {
-        title: "Comprehensive Analytics",
-        description: "Get detailed insights into candidate performance across all three stages, with AI-powered recommendations and scoring.",
+        title: "Transparent Analytics",
+        description: "Track deliveries, loads, and project timelines with clear reporting so you always know where your materials are and when they'll arrive.",
         image: "📊",
         color: "from-orange-500/20 to-yellow-500/20"
     }
 ];
+
 
 const Features = () => {
     return (
@@ -73,13 +74,13 @@ const Features = () => {
                         variants={featureCardVariant}
                         className="text-4xl font-semibold mb-6 md:text-5xl lg:text-6xl"
                     >
-                        Revolutionizing Technical Interviews
+                        Hauling Reimagined.
                     </motion.h2>
                     <motion.p 
                         variants={featureCardVariant}
                         className="text-muted-foreground text-lg max-w-2xl mx-auto"
                     >
-                        A three-stage interview process that combines AI-powered behavioral assessment, interactive system design, and personalized technical challenges.
+                        Our trucks are built to haul, our service is built to last.
                     </motion.p>
                 </motion.div>
 
@@ -128,7 +129,7 @@ const Features = () => {
                 >
                     <Link to="/contact">
                         <Button size="lg" className="group bg-blue-600 hover:bg-blue-700">
-                            Get Started
+                            Contact Us
                             <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
                         </Button>
                     </Link>

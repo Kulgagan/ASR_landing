@@ -121,11 +121,11 @@ export const navMenu: MenuItem[] = [
 
 // Hero
 export const heroData = {
-  sectionSubtitle: 'Automate your hiring process.',
-  sectionTitle: ['Interview Smarter.', 'Hire Smarter.'],
+  sectionSubtitle: 'Haul with Confidence.',
+  sectionTitle: ['Trucks Built to Haul.', 'Service Built to Last.'],
   decoTitle: '',
   sectionText:
-    'Boardly gives you a smarter way to assess engineers — with a 3-part hands free interview process.',
+    'ASR promises top-quality hauling and premium materials — delivered safely, on time, and tailored to your projects needs.',
 };
 
 // Feature

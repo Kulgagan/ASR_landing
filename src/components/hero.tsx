@@ -45,7 +45,20 @@ const Hero = () => {
             variants={heroVariant}
             initial='start'
             animate='end'
-            className="container text-center">
+            className="container relative text-center">
+                {/* Background image behind text */}
+                <motion.div 
+                className="absolute inset-0 -z-10"
+                initial={{ opacity: 0, scale: 1.02 }}
+                animate={{ opacity: 0.25, scale: 1 }}
+                transition={{ duration: 1.2, ease: "easeOut" }}
+                >
+                    <img 
+                    src={heroBanner} 
+                    alt="Boardly dashboard background"
+                    className="h-full w-full object-cover"/>
+                </motion.div>
+
                 <div className="max-w-screen-md mx-auto">
                     <motion.p 
                     variants={heroChildVariant}
@@ -72,8 +85,8 @@ const Hero = () => {
                     <motion.div
                     variants={heroChildVariant}
                     className="flex justify-center gap-2 mt-6 md:mt-10">
-                        <Link to="/pricing">
-                            <Button className="bg-blue-600 hover:bg-blue-700">View Pricing</Button>
+                        <Link to="/contact">
+                            <Button className="bg-blue-600 hover:bg-blue-700">Contact Us</Button>
                         </Link>
                         
                         {/* Watch Demo Button - Preserved for future use
@@ -99,69 +112,7 @@ const Hero = () => {
                     </motion.div>
                 </div>
 
-                <div className="relative mt-12 max-w-screen-xl mx-auto isolate rounded-xl md:mt-16">
-                    <motion.figure 
-                    className="bg-background/60 border border-slate-800 backdrop-blur-3xl rounded-xl shadow-2xl overflow-hidden"
-                    initial={{
-                        y:120,
-                        opacity: 0, 
-                        filter: 'blur(5px)'
-                    }}
-                    animate={{
-                        y:0,
-                        opacity:1, 
-                        filter: 'blur(0)',
-
-                    }}
-                    transition={{
-                        duration: 1.5,
-                        delay: 0.5,
-                        ease: 'backInOut'
-                    }}
-                    >
-                        <img 
-                        src={heroBanner} 
-                        width={1468} 
-                        height={815} 
-                        alt="Boardly dashboard" />
-                    </motion.figure>
-{/* Blurry glow */}
-                    <motion.div 
-                    className="absolute bg-blue-600 inset-5 blur-[50px] -z-10"
-                    initial={{
-                        scale: 0.8,
-                        opacity: 0,
-                    }}
-                    animate={{
-                        scale: 1, 
-                        opacity: 1, 
-
-                    }}
-                    transition={{
-                        duration: 2, 
-                        delay: 0.5,
-                        ease: 'backInOut'
-                    }}
-
-                    ></motion.div>
-                    <motion.div 
-                    className="absolute inset-0 bg-blue-600 blur-[200px] scale-y-75 scale-x-125 rounded-full -z-10"
-                    initial={{
-                        scale:0.4, 
-                        opacity: 0
-                    }}
-                    animate={{
-                        scale: 1, 
-                        opacity: 1
-                    }}
-                    transition={{
-                        duration: 2,
-                        delay: 1.5,
-                        ease: "backInOut"
-
-                    }}
-                    ></motion.div>
-                </div>
+                {/* Removed foreground figure; image now sits behind text */}
             </motion.div>
         </section>
     )

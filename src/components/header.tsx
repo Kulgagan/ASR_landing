@@ -39,11 +39,11 @@ const Header = () => {
                                             }
                                         }}
                                     >
-                                        Product
+                                        Services
                                     </Button>
                                 </HoverCardTrigger>
                                 <HoverCardContent className="w-64">
-                                    <p className="text-sm text-muted-foreground">Explore our AI-driven interview tools and code snippet generators.</p>
+                                    <p className="text-sm text-muted-foreground">Explore our premium hauling services and material supply.</p>
                                 </HoverCardContent>
                             </Link>
                         </HoverCard>
@@ -61,23 +61,12 @@ const Header = () => {
                                             }
                                         }}
                                     >
-                                        Solutions
+                                        Why ASR?
                                     </Button>
                                 </HoverCardTrigger>
                                 <HoverCardContent className="w-64">
-                                    <p className="text-sm text-muted-foreground">For startups, enterprises, and hiring managers looking to automate interviews.</p>
+                                    <p className="text-sm text-muted-foreground">For startups, enterprises, and hiring managers looking to automate hauls.</p>
                                 </HoverCardContent>
-                            </Link>
-                        </HoverCard>
-
-                        <HoverCard>
-                            <Link to="/pricing">
-                            <HoverCardTrigger asChild>
-                                <Button variant="ghost" className="hover:underline underline-offset-4 border-0 hover:bg-transparent">Pricing</Button>
-                            </HoverCardTrigger>
-                            <HoverCardContent className="w-64">
-                                <p className="text-sm text-muted-foreground">Transparent pricing with flexible plans for growing teams.</p>
-                            </HoverCardContent>
                             </Link>
                         </HoverCard>
 
@@ -98,18 +87,29 @@ const Header = () => {
                                     </Button>
                                 </HoverCardTrigger>
                                 <HoverCardContent className="w-64">
-                                    <p className="text-sm text-muted-foreground">Learn more about Boardly's mission and team.</p>
+                                    <p className="text-sm text-muted-foreground">Learn more about ASR's mission and team.</p>
                                 </HoverCardContent>
+                            </Link>
+                        </HoverCard>
+
+                        <HoverCard>
+                            <Link to="/contact">
+                            <HoverCardTrigger asChild>
+                                <Button variant="ghost" className="hover:underline underline-offset-4 border-0 hover:bg-transparent">Contact Us</Button>
+                            </HoverCardTrigger>
+                            <HoverCardContent className="w-64">
+                                <p className="text-sm text-muted-foreground">Contact us for a quote.</p>
+                            </HoverCardContent>
                             </Link>
                         </HoverCard>
                     </div>
                 </NavigationMenu>
-                
-                <div className="flex items-center gap-2 justify-end max-lg:hidden">
+
+                {/*<div className="flex items-center gap-2 justify-end max-lg:hidden">
                     <Link to="/contact">
                         <Button variant="ghost" className="hover:underline underline-offset-4 border-0 hover:bg-transparent">Contact Us</Button>
                     </Link>
-                </div>
+                </div> */}
 
             <Popover>
                 <PopoverTrigger asChild>
