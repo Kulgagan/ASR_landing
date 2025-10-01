@@ -11,6 +11,7 @@ import About from "./components/about";
 import Footer from "./components/footer";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
+
 const App = () => {
   return ( 
     <Router>
