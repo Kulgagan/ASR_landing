@@ -11,18 +11,7 @@ import type { MenuItem } from '@/types';
 /**
  * Assets
  */
-import {
-  ChartArea,
-  Building2,
-  Component,
-  Code,
-  BetweenHorizonalEnd,
-  BrainCircuit,
-  Blocks,
-  Terminal,
-  Package,
-  SquareMousePointer,
-} from 'lucide-react';
+// Removed unused lucide-react icon imports after simplifying nav menu
 
 import {
   feature1,
@@ -38,84 +27,20 @@ import {
 // Header
 export const navMenu: MenuItem[] = [
   {
-    href: '/products',
-    label: 'Products',
-    submenu: [
-      {
-        href: '#',
-        icon: <ChartArea />,
-        label: 'User Analytics',
-        desc: 'Powerful options to securely authenticate and manage',
-      },
-      {
-        href: '#',
-        icon: <Building2 />,
-        label: 'B2B SaaS Suite',
-        desc: 'Add-on features built specifically for B2B applications',
-      },
-      {
-        href: '#',
-        icon: <Component />,
-        label: 'React Components',
-        desc: 'Embeddable prebuilt UI components for quick and seamless integrations',
-      },
-      {
-        href: '#',
-        icon: <Code />,
-        label: 'Next.js Analytics',
-        desc: 'The fastest and most seamless authentication solution for Next.js',
-      },
-      {
-        href: '#',
-        icon: <BetweenHorizonalEnd />,
-        label: 'AnalytiX Elements',
-        desc: 'Unstyled UI primitives for endless customization. Powered by AnalytiX',
-      },
-      {
-        href: '#',
-        icon: <BrainCircuit />,
-        label: 'Authentication for AI',
-        desc: 'Authentication and abuse protection tailored to AI applications',
-      },
-    ],
+    href: '/',
+    label: 'Product',
   },
   {
-    href: '/features',
-    label: 'Features',
+    href: '/',
+    label: 'Solutions',
   },
   {
-    href: '/docs',
-    label: 'Docs',
-    submenu: [
-      {
-        href: '#',
-        icon: <Terminal />,
-        label: 'Getting Started',
-        desc: 'Powerful options to securely authenticate and manage',
-      },
-      {
-        href: '#',
-        icon: <Package />,
-        label: 'Core Concepts',
-        desc: 'Add-on features built specifically for B2B applications',
-      },
-      {
-        href: '#',
-        icon: <SquareMousePointer />,
-        label: 'Customization',
-        desc: 'Embeddable prebuilt UI components for quick and seamless integrations',
-      },
-      {
-        href: '#',
-        icon: <Blocks />,
-        label: 'Official Plugins',
-        desc: 'The fastest and most seamless authentication solution for Next.js',
-      },
-    ],
+    href: '/contact',
+    label: 'Contact Us',
   },
   {
-    href: '/pricing',
-    label: 'Pricing',
+    href: '/',
+    label: 'About',
   },
 ];
 
@@ -294,7 +219,7 @@ export const ctaData = {
 
 // Footer
 export const footerData = {
-  links: [
+ /* links: [
     {
       title: 'Product',
       items: [
@@ -383,30 +308,10 @@ export const footerData = {
         },
       ],
     },
-  ],
-  copyright: '© 2024 codewithsadee',
-  socialLinks: [
-    {
-      href: 'https://x.com/codewithsadee_',
-      icon: "Twitter"
-    },
-    {
-      href: 'https://github.com/codewithsadee',
-      icon: "Github"
-    },
-    {
-      href: 'https://www.linkedin.com/in/codewithsadee/',
-      icon: "Linkedin"
-    },
-    {
-      href: 'https://www.instagram.com/codewithsadee',
-      icon: "Instagram"
-    },
-    {
-      href: 'https://www.youtube.com/codewithsadee',
-      icon: "Youtube"
-    },
-  ],
+  ], */
+copyright: '© 2025 ASR Carriers',
+
+  
 };
 
 // Pricing Plans

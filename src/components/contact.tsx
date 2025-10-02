@@ -26,29 +26,9 @@ const contactCardVariant: Variants = {
         }
     }
 }
-
+//Change this to the actual team members
 const teamMembers = [
-    {
-        name: "Adil Sajid",
-        role: "CTO",
-        email: "adilsajid452@gmail.com",
-        location: "Edmonton, AB",
-        linkedin: "linkedin.com"
-    },
-    {
-        name: "Kulgagan Bajwa",
-        role: "CEO",
-        email: "kulgagan08@gmail.com",
-        location: "Edmonton, AB",
-        linkedin: "linkedin.com/in/kulgagan"
-    },
-    {
-        name: "Hammad Zubair",
-        role: "COO",
-        email: "hammadzubair@hotmail.com",
-        location: "Edmonton, AB",
-        linkedin: "linkedin.com/in/hammad-zubair-20a2a6344"
-    }
+{}
 ];
 
 const Contact = () => {
@@ -75,7 +55,7 @@ const Contact = () => {
                         variants={contactCardVariant}
                         className="text-muted-foreground text-lg max-w-2xl mx-auto"
                     >
-                        Our team is here to help you transform your hiring process. Reach out to us for any questions or to schedule a demo.
+                        Our team is here to help you with your hauling needs. Reach out to us for any questions or to schedule a quote.
                     </motion.p>
                 </motion.div>
 
@@ -86,7 +66,7 @@ const Contact = () => {
                     viewport={{ once: true }}
                     className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto"
                 >
-                    {teamMembers.map((member, index) => (
+                    {/*{teamMembers.map((member, index) => (
                         <motion.div
                             key={index}
                             variants={contactCardVariant}
@@ -108,16 +88,17 @@ const Contact = () => {
                                         <MapPin className="h-5 w-5 text-primary" />
                                         <span>{member.location}</span>
                                     </li>
-                                    <li className="flex items-center gap-2">
+                                    {/*<li className="flex items-center gap-2">
                                         <Linkedin className="h-5 w-5 text-primary" />
                                         <a href={`https://${member.linkedin}`} target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
                                             LinkedIn
                                         </a>
-                                    </li>
+                                    </li>}
                                 </ul>
                             </div>
                         </motion.div>
-                    ))}
+                    ))}*/}
+
                 </motion.div>
 
                 <motion.div
@@ -130,13 +111,13 @@ const Contact = () => {
                     <div className="relative group rounded-2xl p-8 bg-gradient-to-br from-purple-500/20 to-pink-500/20 border border-slate-800/50 backdrop-blur-3xl hover:border-primary/50 transition-all duration-300">
                         <div className="absolute inset-0 bg-gradient-to-br from-background/50 to-background/80 rounded-2xl" />
                         <div className="relative">
-                            <h3 className="text-2xl font-semibold mb-4">General Inquiries</h3>
+                            <h3 className="text-2xl font-semibold mb-4">General Inquiries/Quotes</h3>
                             <p className="text-muted-foreground mb-6">For general questions or support, please contact our main office.</p>
                             <ul className="space-y-4">
                                 <li className="flex items-center justify-center gap-2">
                                     <Mail className="h-5 w-5 text-primary" />
-                                    <a href="mailto:info@boardly.com" className="hover:text-primary transition-colors">
-                                        info@boardly.com
+                                    <a href="mailto:asrcarriers80@gmail.com" className="hover:text-primary transition-colors">
+                                        asrcarriers80@gmail.com
                                     </a>
                                 </li>
                                 <li className="flex items-center justify-center gap-2">
