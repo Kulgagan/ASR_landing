@@ -1,7 +1,8 @@
 
 import { motion } from "framer-motion";
 import type { Variants } from "framer-motion";
-import { Mail, Phone, MapPin, Linkedin } from "lucide-react";
+import { Mail, Phone, Instagram } from "lucide-react";
+import { useEffect } from "react";
 
 const contactVariant: Variants = {
     start: {},
@@ -27,13 +28,23 @@ const contactCardVariant: Variants = {
     }
 }
 //Change this to the actual team members
-const teamMembers = [
+/*const teamMembers = [
 {}
-];
+];*/
 
 const Contact = () => {
+    useEffect(() => {
+        // Jump to top and lock scroll while on Contact page
+        window.scrollTo({ top: 0, left: 0, behavior: "instant" as ScrollBehavior });
+        const previousOverflow = document.body.style.overflow;
+        document.body.style.overflow = "hidden";
+        return () => {
+            document.body.style.overflow = previousOverflow;
+        };
+    }, []);
+
     return (
-        <section className="py-16 md:py-24 relative overflow-hidden">
+        <section className="py-16 md:py-24 relative overflow-hidden min-h-screen">
             {/* Background gradient */}
             <div className="absolute inset-0 bg-gradient-to-b from-background via-background/50 to-background/80 -z-10" />
             
@@ -123,9 +134,16 @@ const Contact = () => {
                                 <li className="flex items-center justify-center gap-2">
                                     <Phone className="h-5 w-5 text-primary" />
                                     <a href="tel:+18005551234" className="hover:text-primary transition-colors">
-                                        +1 (800) 555-1234
+                                        +1 (780) 677-6300
                                     </a>
                                 </li>
+                                <li className="flex items-center justify-center gap-2">
+                                    <Instagram className="h-5 w-5 text-primary" />
+                                    <a href="https://www.instagram.com/edmonton_gravel_trucks/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+                                        @asrcarriers
+                                    </a>
+                                </li>
+
                             </ul>
                         </div>
                     </div>

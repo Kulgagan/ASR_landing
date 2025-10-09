@@ -188,7 +188,7 @@ const Pricing = () => {
                             <p className="text-muted-foreground mb-6">Contact our sales team to discuss your specific requirements and get a tailored quote.</p>
                             <Button 
                                 size="lg" 
-                                className="group bg-blue-600 hover:bg-blue-700"
+                                className="group"
                             >
                                 <Link to="/contact" className="flex items-center">
                                     Contact Us

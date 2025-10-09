@@ -1,6 +1,6 @@
-import { Link } from "react-router-dom";
+//import { Link } from "react-router-dom";
 import { footerData } from "@/constants";
-import { Twitter, Github, Linkedin, Instagram, Youtube } from "lucide-react";
+/*import { Twitter, Github, Linkedin, Instagram, Youtube } from "lucide-react";
 
 /*const iconMap = {
   Twitter: Twitter,

@@ -1,78 +1,37 @@
-/**
- * @copyright 2024 codewithsadee
- * @license Apache-2.0
- */
-
-/**
- * Types
- */
 import type { MenuItem } from '@/types';
 
-/**
- * Assets
- */
-// Removed unused lucide-react icon imports after simplifying nav menu
-
-import {
-  feature1,
-  feature2,
-  blog1,
-  blog2,
-  blog3,
-  avatar1,
-  avatar2,
-  avatar3,
-} from '@/assets';
-
-// Header
+// Navigation Menu
 export const navMenu: MenuItem[] = [
-  {
-    href: '/',
-    label: 'Product',
-  },
-  {
-    href: '/',
-    label: 'Solutions',
-  },
-  {
-    href: '/contact',
-    label: 'Contact Us',
-  },
-  {
-    href: '/',
-    label: 'About',
-  },
+  { href: '/', label: 'Product' },
+  { href: '/', label: 'Solutions' },
+  { href: '/contact', label: 'Contact Us' },
+  { href: '/', label: 'About' },
 ];
 
-// Hero
+// Hero Section
 export const heroData = {
   sectionSubtitle: 'Haul with Confidence.',
   sectionTitle: ['Trucks Built to Haul.', 'Service Built to Last.'],
-  decoTitle: '',
-  sectionText:
-    'ASR promises top-quality hauling and premium materials — delivered safely, on time, and tailored to your projects needs.',
+  sectionText: 'ASR promises top-quality hauling and premium materials — delivered safely, on time, and tailored to your projects needs.',
 };
 
-// Feature
+// Features Section
 export const featureData = {
   sectionSubtitle: 'Features',
   sectionTitle: 'Discover Powerful Features',
-  sectionText:
-    'Unleash the power of our platform with a multitude of powerful features, empowering you to achieve your goals.',
+  sectionText: 'Unleash the power of our platform with a multitude of powerful features, empowering you to achieve your goals.',
   features: [
     {
       icon: "ChartPie",
       iconBoxColor: 'bg-blue-600',
       title: 'Advance Analytics',
       desc: 'Experience advanced analytics capabilities that enable you to dive deep into data, uncover meaningful patterns, and derive actionable insights',
-      imgSrc: feature1,
     },
     {
       icon: "Files",
       iconBoxColor: 'bg-cyan-500',
       title: 'Automated Reports',
       desc: 'Save time and effort with automated reporting, generating comprehensive and accurate reports automatically, streamlining your data analysis',
-      imgSrc: feature2,
     },
     {
       icon: "UserRoundPen",
@@ -95,12 +54,11 @@ export const featureData = {
   ],
 };
 
-// Process
+// Process Section
 export const processData = {
   sectionSubtitle: 'How it works',
   sectionTitle: 'Easy Process to Get Started',
-  sectionText:
-    'Discover how it works by leveraging advanced algorithms and data analysis techniques.',
+  sectionText: 'Discover how it works by leveraging advanced algorithms and data analysis techniques.',
   list: [
     {
       icon: "LaptopMinimal",
@@ -120,256 +78,67 @@ export const processData = {
   ],
 };
 
-// Overview
-export const overviewData = {
-  sectionSubtitle: 'Overview',
-  sectionTitle: 'All-In-One Analytics Tool',
-  sectionText:
-    'Powerful analytics made easy. Make data-driven decisions with our all-in-one tool.',
-  listTitle: 'More than 1M+ people around the world are already using',
-  list: [
-    {
-      title: '1M+',
-      text: 'Active Downloads',
-    },
-    {
-      title: '4.86',
-      text: 'Average Rating',
-    },
-    {
-      title: '60K+',
-      text: 'Active Users',
-    },
-  ],
-};
-
-// Review
-export const reviewData = {
-  sectionSubtitle: 'Reviews',
-  sectionTitle: 'What Our Customers Are Says',
-  reviewCard: [
-    {
-      title: 'Were building a better application now, thanks to AnalytiX.',
-      text: 'Our application is undergoing significant improvements with the help of NioLand, resulting in enhanced functionality, improved user experience',
-      reviewAuthor: 'Wade Warren',
-      date: '3month ago',
-    },
-    {
-      title: 'Great Service from a expert support system of AnalytiX',
-      text: 'Experience exceptional service and support from AnalytiX expert team, dedicated to providing knowledgeable assistance and ensuring a seamless',
-      reviewAuthor: 'Dianne Russell',
-      date: '3month ago',
-    },
-    {
-      title: 'Pricing is amazing for the small businesses around the world',
-      text: 'Our pricing is tailored to suit the needs of small businesses worldwide, offering affordable and competitive rates that provide excellent value for',
-      reviewAuthor: 'Marvin McKinney',
-      date: '3month ago',
-    },
-  ],
-};
-
-// Blog
-export const blogData = {
-  sectionSubtitle: 'Our Blog',
-  sectionTitle: 'Resource Center',
-  sectionText:
-    'Unlock the potential of our resource center, accessing valuable information and insights for your business growth.',
-  blogs: [
-    {
-      imgSrc: blog1,
-      badge: 'Growth',
-      title: 'Why customer retention is the ultimate growth strategy?',
-      author: {
-        avatarSrc: avatar1,
-        authorName: 'John Carte',
-        publishDate: 'Oct 10, 2024',
-        readingTime: '8 min read',
-      },
-    },
-    {
-      imgSrc: blog2,
-      badge: 'Marketing',
-      title: 'Optimizing your advertising campaigns for higher ROAS',
-      author: {
-        avatarSrc: avatar2,
-        authorName: 'Annette Black',
-        publishDate: 'Jul 15, 2024',
-        readingTime: '5 min read',
-      },
-    },
-    {
-      imgSrc: blog3,
-      badge: 'Growth',
-      title: 'How to build the ultimate tech stack for growth',
-      author: {
-        avatarSrc: avatar3,
-        authorName: 'Ralph Edwards',
-        publishDate: 'Mar 24, 2024',
-        readingTime: '2 min read',
-      },
-    },
-  ],
-};
-
-// Cta
-export const ctaData = {
-  text: 'Start tracking your user analytics to boost your business',
-};
-
 // Footer
 export const footerData = {
- /* links: [
-    {
-      title: 'Product',
-      items: [
-        {
-          href: '#',
-          label: 'Components',
-        },
-        {
-          href: '#',
-          label: 'Pricing',
-        },
-        {
-          href: '#',
-          label: 'Dashboard',
-        },
-        {
-          href: '#',
-          label: 'Feature requests',
-        },
-      ],
-    },
-    {
-      title: 'Developers',
-      items: [
-        {
-          href: '#',
-          label: 'Documentation',
-        },
-        {
-          href: '#',
-          label: 'Discord server',
-        },
-        {
-          href: '#',
-          label: 'Support',
-        },
-        {
-          href: '#',
-          label: 'Glossary',
-        },
-        {
-          href: '#',
-          label: 'Changelog',
-        },
-      ],
-    },
-    {
-      title: 'Company',
-      items: [
-        {
-          href: '#',
-          label: 'About',
-        },
-        {
-          href: '#',
-          label: 'Careers',
-        },
-        {
-          href: '#',
-          label: 'Blog',
-        },
-        {
-          href: '#',
-          label: 'Contact',
-        },
-      ],
-    },
-    {
-      title: 'Legal',
-      items: [
-        {
-          href: '#',
-          label: 'Terms and Conditions',
-        },
-        {
-          href: '#',
-          label: 'Privacy Policy',
-        },
-        {
-          href: '#',
-          label: 'Data Processing Agreement',
-        },
-        {
-          href: '#',
-          label: 'Cookie manager',
-        },
-      ],
-    },
-  ], */
-copyright: '© 2025 ASR Carriers',
-
-  
+  copyright: '© 2025 ASR Carriers',
 };
 
 // Pricing Plans
 export const plans = [
-    {
-        name: "Starter",
-        price: "$199",
-        originalPrice: "$499",
-        description: "Perfect for small teams starting with technical interviews",
-        features: [
-            "Up to 10 interviews per month",
-            "AI behavioral interviews",
-            "Basic whiteboard system",
-            "Standard technical assessments",
-            "Email support",
-            "Basic analytics dashboard"
-        ],
-        buttonText: "Contact Sales",
-        popular: false,
-        color: "from-blue-500/20 to-purple-500/20"
-    },
-    {
-        name: "Professional",
-        price: "$499",
-        originalPrice: "$1499",
-        description: "Ideal for growing companies with regular hiring needs",
-        features: [
-            "Up to 50 interviews per month",
-            "Advanced AI behavioral interviews",
-            "Full whiteboard system",
-            "Customized technical assessments",
-            "Priority support",
-            "Advanced analytics dashboard",
-            "Team collaboration features",
-            "Custom branding"
-        ],
-        buttonText: "Contact Sales",
-        popular: true,
-        color: "from-purple-500/20 to-pink-500/20"
-    },
-    {
-        name: "Enterprise",
-        price: "Custom",
-        description: "Tailored solutions for large organizations",
-        features: [
-            "Unlimited interviews",
-            "Custom AI interview models",
-            "Advanced whiteboard features",
-            "Custom assessment frameworks",
-            "Dedicated support team",
-            "Enterprise analytics",
-            "API access",
-            "Custom integrations",
-            "SLA guarantees",
-            "On-premise deployment"
-        ],
-        buttonText: "Contact Sales",
-        popular: false,
-        color: "from-pink-500/20 to-orange-500/20"
-    }
+  {
+    name: "Starter",
+    price: "$199",
+    originalPrice: "$499",
+    description: "Perfect for small teams starting with technical interviews",
+    features: [
+      "Up to 10 interviews per month",
+      "AI behavioral interviews",
+      "Basic whiteboard system",
+      "Standard technical assessments",
+      "Email support",
+      "Basic analytics dashboard"
+    ],
+    buttonText: "Contact Sales",
+    popular: false,
+    color: "from-blue-500/20 to-purple-500/20"
+  },
+  {
+    name: "Professional",
+    price: "$499",
+    originalPrice: "$1499",
+    description: "Ideal for growing companies with regular hiring needs",
+    features: [
+      "Up to 50 interviews per month",
+      "Advanced AI behavioral interviews",
+      "Full whiteboard system",
+      "Customized technical assessments",
+      "Priority support",
+      "Advanced analytics dashboard",
+      "Team collaboration features",
+      "Custom branding"
+    ],
+    buttonText: "Contact Sales",
+    popular: true,
+    color: "from-purple-500/20 to-pink-500/20"
+  },
+  {
+    name: "Enterprise",
+    price: "Custom",
+    description: "Tailored solutions for large organizations",
+    features: [
+      "Unlimited interviews",
+      "Custom AI interview models",
+      "Advanced whiteboard features",
+      "Custom assessment frameworks",
+      "Dedicated support team",
+      "Enterprise analytics",
+      "API access",
+      "Custom integrations",
+      "SLA guarantees",
+      "On-premise deployment"
+    ],
+    buttonText: "Contact Sales",
+    popular: false,
+    color: "from-pink-500/20 to-orange-500/20"
+  }
 ];

@@ -1,134 +1,71 @@
-//node module 
 import { motion } from "framer-motion";
-import type { Variants } from "framer-motion";
-import { Link } from "react-router-dom"
-
-//Components
-import { Button } from "./ui/button"
-//assests
-import { heroBanner } from "@/assets"
-
-//Constants
-import { heroData } from "@/constants"
-
-//Framer motion varaints
-const heroVariant: Variants = {
-    start: {},
-    end: {
-        transition: {
-            staggerChildren: 0.4
-        }
-    }
-}
-
-const heroChildVariant: Variants = {
-    start: {
-        y: 30,
-        opacity: 0, 
-        filter: "blur(5px)"
-    },
-    end: {
-        y: 0, 
-        opacity: 1, 
-        filter: 'blur(0)', 
-        transition: {
-            duration: 0.7,
-            ease: "easeOut"
-        }
-    },
-}
+import { Link } from "react-router-dom";
+import { Button } from "./ui/button";
+import { truck2 } from "@/assets";
+import { heroData } from "@/constants";
+import { staggerContainerSlow, fadeInUp } from "@/lib/animations";
 
 const Hero = () => {
-    return (
-        <section className="py-10 md:py-16">
-            <motion.div 
-            variants={heroVariant}
-            initial='start'
-            animate='end'
-            className="container relative text-center">
-                {/* Background image behind text */}
-                <motion.div 
-                className="absolute inset-0 -z-10"
-                initial={{ opacity: 0, scale: 1.02 }}
-                animate={{ opacity: 0.25, scale: 1 }}
-                transition={{ duration: 1.2, ease: "easeOut" }}
-                >
-                    <img 
-                    src={heroBanner} 
-                    alt="Boardly dashboard background"
-                    className="h-full w-full object-cover"/>
-                </motion.div>
+  return (
+    <section className="py-10 md:py-16 relative overflow-hidden">
+      {/* Full-bleed background image */}
+      <motion.div 
+        className="absolute inset-0 -z-10"
+        initial={{ opacity: 0, scale: 1.02 }}
+        animate={{ opacity: 0.25, scale: 1 }}
+        transition={{ duration: 1.2, ease: "easeOut" }}
+      >
+        <img 
+          src={truck2} 
+          alt="Hero background"
+          className="h-full w-full object-cover"
+        />
+      </motion.div>
 
-                <div className="max-w-screen-md mx-auto">
-                    <motion.p 
-                    variants={heroChildVariant}
-                    className="text-sm uppercase tracking-wider bg-secondary/50 text-secondary-foreground max-w-max mx-auto px-3 py-1 rounded-full boarder-t border-blue-500/10 backdrop-blur-3x1 mb-6 md:mb-10">
-                        {heroData.sectionSubtitle}
-                    </motion.p>
+      <motion.div 
+        variants={staggerContainerSlow}
+        initial='start'
+        animate='end'
+        className="container text-center"
+      >
+        <div className="max-w-screen-md mx-auto">
+          <motion.p 
+            variants={fadeInUp}
+            className="text-sm uppercase tracking-wider bg-secondary/50 text-secondary-foreground max-w-max mx-auto px-3 py-1 rounded-full border-t border-blue-500/10 backdrop-blur-3xl mb-6 md:mb-10"
+          >
+            {heroData.sectionSubtitle}
+          </motion.p>
 
-                    <motion.h2 
-                    variants={heroChildVariant}
-                    className="text-4xl font-semibold !leading-tight mb-4 md:text-5xl md:mb-5 lg:text-6xl"
-                    >
-                    {heroData.sectionTitle.map((line, idx) => (
-                        <span key={idx} className="block">
-                        {line}
-                        </span>
-                    ))}
-                    </motion.h2>
+          <motion.h2 
+            variants={fadeInUp}
+            className="text-4xl font-semibold !leading-tight mb-4 md:text-5xl md:mb-5 lg:text-6xl"
+          >
+            {heroData.sectionTitle.map((line, idx) => (
+              <span key={idx} className="block">
+                {line}
+              </span>
+            ))}
+          </motion.h2>
 
+          <motion.p 
+            variants={fadeInUp}
+            className="text-muted-foreground md:text-xl"
+          >
+            {heroData.sectionText}
+          </motion.p>
 
-                    <motion.p 
-                    variants={heroChildVariant}
-                    className="text-muted-foreground md:text-xl">{heroData.sectionText}</motion.p>
-
-                    <motion.div
-                    variants={heroChildVariant}
-                    className="flex justify-center gap-2 mt-6 md:mt-10">
-                        <Link to="/contact">
-                            <Button className="bg-blue-600 hover:bg-blue-700">Contact Us</Button>
-                        </Link>
-                        
-                        {/* Watch Demo Button - Preserved for future use
-                        <Dialog>
-                            <DialogTrigger asChild>
-                            <Button 
-                            variant="ghost">
-                                <CirclePlay/> Watch Demo</Button>
-                            </DialogTrigger>
-
-                            <DialogContent className="sm:max-w-[600px]">
-                                <AspectRatio ratio={16/9}>
-                                    <ReactPlayer url="https://www.youtube.com/watch?v=jT4sfTJjOSM" style={{
-                                        minWidth: "100%",
-                                        maxWidth: "100%",
-                                        minHeight: "100%",
-                                        maxHeight: "100%",
-                                    }}/>
-                                </AspectRatio>
-                            </DialogContent>
-                        </Dialog>  
-                        */}
-                    </motion.div>
-                </div>
-
-                {/* Removed foreground figure; image now sits behind text */}
-            </motion.div>
-        </section>
-    )
+          <motion.div
+            variants={fadeInUp}
+            className="flex justify-center gap-2 mt-6 md:mt-10"
+          >
+            <Link to="/contact">
+              <Button>Get a Quote</Button>
+            </Link>
+          </motion.div>
+        </div>
+      </motion.div>
+    </section>
+  )
 }
 
-export default Hero
-
-//outer div controls the padding, width, background
-//p renders paragraph. h2 renders a main heading. Title of the hero section
-//span used to highlight or decorate part of title
-
-/*
-    Blue (blue-600/blue-700)
-    Green (green-600/green-700)
-    Red (red-600/red-700)
-    Orange (orange-600/orange-700)
-    Pink (pink-600/pink-700)
-    Indigo (indigo-600/indigo-700)
-    Cyan (cyan-600/cyan-700) */
+export default Hero;

@@ -1,7 +1,7 @@
 import { cn } from "@/lib/utils"
 import { Link } from "react-router-dom"
 import { Button } from "./button"
-import logo from "@/assets/logo.png"
+import logo from "@/assets/acc logo.jpg"
 
 interface LogoProps {
     variant?: "default" | "icon"

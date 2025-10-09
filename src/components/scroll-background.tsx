@@ -26,7 +26,7 @@ const ScrollBackground: React.FC<ScrollBackgroundProps> = ({ imageUrl }) => {
                     backgroundPosition: "center",
                 }}
             />
-            <div className="absolute inset-0 bg-white/70" />
+            <div className="absolute inset-0 bg-white/1" />
         </motion.div>
     );
 };
